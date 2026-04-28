@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio interactif — Killian Vandenhole</title>
+  <meta name="description" content="Portfolio interactif de Killian Vandenhole en HTML, CSS et vanilla JavaScript." />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=boska@500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#accueil" aria-label="Retour en haut de la page">
+        <svg class="brand-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M17 14V50" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          <path d="M20 33L44 14" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          <path d="M20 33L46 50" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+        <span>Killian Vandenhole</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="#a-propos">À propos</a>
+        <a href="#projets">Projets</a>
+        <a href="#competences">Compétences</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Changer de thème">
+          <span aria-hidden="true">◐</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero reveal" id="accueil">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Portfolio interactif</div>
+          <h1>Killian Vandenhole</h1>
+          <p class="lead">Je crée des interfaces web modernes, lisibles et efficaces avec une approche simple, propre et orientée utilisateur.</p>
+          <p>Cette version ajoute du vanilla JavaScript pour rendre la page plus vivante : thème dynamique, animation des chiffres, filtre de projets, navigation active et formulaire interactif.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projets">Voir mes projets</a>
+            <a class="btn btn-secondary" href="#contact">Me contacter</a>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal" aria-label="Résumé rapide">
+          <div class="metric">
+            <strong class="counter" data-target="3" data-suffix="">0</strong>
+            <span>Projets mis en avant</span>
+          </div>
+          <div class="metric">
+            <strong class="counter" data-target="4" data-suffix="+">0</strong>
+            <span>Interactions JavaScript ajoutées</span>
+          </div>
+          <div class="metric">
+            <strong class="counter" data-target="100" data-suffix="%">0</strong>
+            <span>HTML, CSS et vanilla JS</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="a-propos" class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>À propos</h2>
+            <p>Une section de présentation claire avec une identité visuelle sobre et quelques interactions utiles.</p>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-card">
+            <p class="lead">Bonjour, je suis Killian Vandenhole. J’aime développer des pages web soignées, utiles et agréables à utiliser.</p>
+            <p class="muted">Cette maquette est pensée pour évoluer facilement : tu peux remplacer les textes, brancher de vrais liens, ajouter d’autres sections ou connecter un vrai formulaire plus tard.</p>
+          </article>
+
+          <aside class="panel">
+            <h3>Ajouts JavaScript</h3>
+            <ul class="list">
+              <li>Animation automatique des compteurs dans le hero.</li>
+              <li>Filtrage des projets par catégorie.</li>
+              <li>Navigation active selon la section visible.</li>
+              <li>Validation simple du formulaire côté client.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Projets</h2>
+            <p>Tu peux cliquer sur les filtres pour n’afficher que certains types de projets.</p>
+          </div>
+        </div>
+
+        <div class="filter-bar" aria-label="Filtres projets">
+          <button class="filter-btn is-selected" type="button" data-filter="all">Tous</button>
+          <button class="filter-btn" type="button" data-filter="web">Web</button>
+          <button class="filter-btn" type="button" data-filter="ui">UI</button>
+          <button class="filter-btn" type="button" data-filter="front">Front-end</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project-card" data-category="web front">
+            <div class="project-top">
+              <span class="tag">Projet 01</span>
+              <span class="muted">2026</span>
+            </div>
+            <h3>Site vitrine moderne</h3>
+            <p class="muted">Création d’une interface élégante avec une hiérarchie visuelle claire, un design responsive et une navigation fluide.</p>
+            <div class="tag-row">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Responsive</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="ui web">
+            <div class="project-top">
+              <span class="tag">Projet 02</span>
+              <span class="muted">2026</span>
+            </div>
+            <h3>Refonte portfolio personnel</h3>
+            <p class="muted">Mise en avant du profil, des compétences et des réalisations avec une structure simple à lire et facile à maintenir.</p>
+            <div class="tag-row">
+              <span class="tag">UI</span>
+              <span class="tag">Design</span>
+              <span class="tag">Accessibilité</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="front web">
+            <div class="project-top">
+              <span class="tag">Projet 03</span>
+              <span class="muted">2026</span>
+            </div>
+            <h3>Landing page interactive</h3>
+            <p class="muted">Développement d’une page de présentation avec appels à l’action, interactions JavaScript légères et structure claire.</p>
+            <div class="tag-row">
+              <span class="tag">UX</span>
+              <span class="tag">Vanilla JS</span>
+              <span class="tag">Front-end</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences" class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Compétences</h2>
+            <p>Une structure simple en trois blocs que tu peux adapter selon ton vrai profil.</p>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-box">
+            <h3>Front-end</h3>
+            <div class="skill-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </article>
+
+          <article class="skill-box">
+            <h3>Design</h3>
+            <div class="skill-tags">
+              <span class="tag">UI</span>
+              <span class="tag">Mise en page</span>
+              <span class="tag">Responsive</span>
+            </div>
+          </article>
+
+          <article class="skill-box">
+            <h3>Qualités</h3>
+            <div class="skill-tags">
+              <span class="tag">Autonomie</span>
+              <span class="tag">Créativité</span>
+              <span class="tag">Rigueur</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <div class="container contact-grid">
+        <article>
+          <h2>Contact</h2>
+          <p class="lead">Un formulaire court, simple et validé côté client suffit souvent pour une première version.</p>
+          <p class="muted">Le message n’est pas réellement envoyé ici, mais le JavaScript vérifie les champs et affiche un retour visuel immédiat.</p>
+        </article>
+
+        <aside class="contact-box">
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:killian@example.com">
+              <span>Email</span>
+              <span>killian@example.com</span>
+            </a>
+            <div class="contact-link">
+              <span>LinkedIn</span>
+              <span>À ajouter</span>
+            </div>
+            <div class="contact-link">
+              <span>GitHub</span>
+              <span>À ajouter</span>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Nom</label>
+              <input id="name" name="name" type="text" placeholder="Ton nom" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="ton@email.com" required />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Ton message" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Envoyer</button>
+            <p class="form-feedback" id="formFeedback" aria-live="polite"></p>
+          </form>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>© 2026 — Killian Vandenhole</span>
+      <span>Portfolio HTML / CSS / Vanilla JS</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
